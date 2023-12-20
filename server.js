@@ -14,7 +14,7 @@ const dbconnection = require('./utility/database')
 
 // middleware
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://nikwebservice.onrender.com',
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     preflightContinue: false,
     optionsSuccessStatus: 200
