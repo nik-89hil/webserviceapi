@@ -10,7 +10,7 @@ const addClient = async (req, res) => {
                 success: true,
                 data: "Your request is in progress. Kindly wait, we will contact you soon."
             })
-            res.end();
+            return
         }
         const result = await Client.create({ 
             clientemail,
@@ -21,14 +21,14 @@ const addClient = async (req, res) => {
             success: true,
             data: result
         });
-        res.end();
+        return
 
     } catch (error) {
         res.json({
             success:false,
             err:error?.message
         });
-        res.end();
+        return
 
     }
 
